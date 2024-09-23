@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="bg-[#F9F7F3] py-6 font-lexend">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center">
+          <button
+            id="btn_home"
+            class="px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
+          >
+            Home
+          </button>
+          <div class="flex items-center gap-2">
+            <img src="./images/logo.png" alt="logo image" />
+            <h1 class="text-lg font-semibold">Donate Bangladesh</h1>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="./images/coin.png" alt="coin image" />
+            <div id="show_amount">
+              <h3 id="amount" class="text-lg font-medium">5000 BDT</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <!-- main start -->
+
+    <!-- important faq section start -->
+    <section class="max-w-7xl mx-auto font-lexend">
+      <div class="flex items-center gap-4">
+        <h1 class="text-4xl font-bold my-10">IMPORTANT FAQ</h1>
+        <img class="w-11 animate-bounce" src="./images/chat.png" alt="">
+      </div>
+      <div
+        class="collapse collapse-arrow bg-gray-100 border border-gray-300 py-4"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-bold">
+          What is the document object model(DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is a programming interface that
+            represents the structure of a web page as a tree of objects. It
+            allows developers to interact with and manipulate HTML and XML
+            documents dynamically, modifying elements, styles, and content using
+            JavaScript.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow py-4 bg-gray-100 border border-gray-300"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            document.getElementById(id) – Selects an element by its ID. <br />
+            document.querySelector(selector) – Selects the first element that
+            matches a CSS selector. <br />
+            document.querySelectorAll(selector) – Selects all elements matching
+            a CSS selector. <br />
+            document.getElementsByClassName(className) – Selects elements by
+            class name. <br />
+            document.getElementsByTagName(tagName) – Selects elements by tag
+            name.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow py-4 bg-gray-100 border border-gray-300"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold">
+          What is event delegation in the context of the DOM, why is it useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique in the DOM where you attach a single
+            event listener to a parent element to manage events triggered by its
+            child elements. Instead of adding separate event listeners to each
+            child, the event bubbles up to the parent, which handles it. <br />
+
+            <b> useful: </b> <br />
+            Improved Performance: Reduces the number of event listeners,
+            especially when handling a large number of child elements. <br />
+            Dynamic Content: It works for both existing and dynamically added
+            child elements. <br />
+            Simplified Code: It reduces complexity by consolidating event
+            handling in one place.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow py-4 bg-gray-100 border border-gray-300"
+      >
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold">
+          How do you manipulate an elements , attributes and styls using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            element.textContent: Sets or gets the text content of an element.
+            <br />
+            element.innerHTML: Sets or gets the HTML content of an element.
+            <br />
+            element.innerText: Sets or gets the text visible in the element.
+            <br />
+            element.setAttribute(attribute, value): Sets the value of an
+            attribute. <br />
+            element.getAttribute(attribute): Gets the value of an attribute.
+            <br />
+            element.removeAttribute(attribute): Removes an attribute from the
+            element <br />
+            element.classList.add(className), remove, or toggle: Adds, removes,
+            or toggles a CSS class. js
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- important faq section end -->
+    <!-- main end -->
+
+    <!-- footer start  -->
+    <footer class="bg-[#F9F7F3] py-10 font-lexend mt-20">
+      <p class="text-center italic font-medium">Developed by © Md Rony</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- add js file -->
+    <script src="./js/blog.js"></script>
+  </body>
+</html>

@@ -17,3 +17,10 @@ document.getElementById("btn_history").addEventListener("click", function () {
 document.getElementById("btn_donation").addEventListener("click", function () {
   tabButton("btn_donation", "btn_history", "show_donation", "show_history");
 });
+
+
+// blog button functionality
+document.getElementById("btn_blog").addEventListener("click",function(){
+  window.location.href = "./blog.html"
+})
+
