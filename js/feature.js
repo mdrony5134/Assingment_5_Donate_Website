@@ -21,6 +21,6 @@ document.getElementById("btn_donation").addEventListener("click", function () {
 
 // blog button functionality
 document.getElementById("btn_blog").addEventListener("click",function(){
-  window.location.href = "./blog.html"
+  window.location.href = "/blog.html"
 })
 
