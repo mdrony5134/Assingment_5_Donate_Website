@@ -32,7 +32,7 @@ function handleDonationCalculation(
   const newAmount = amount - donateValue;
   document.getElementById(
     showAmountId
-  ).innerHTML = `<h3 id="current_donation_amount" class="font-medium text-lg"> ${newDonateAmount} BDT </h3>`;
+  ).innerHTML = `<h3 id="${currentDonationId}" class="font-medium text-lg"> ${newDonateAmount} BDT </h3>`;
   document.getElementById(
     "show_amount"
   ).innerHTML = `<h3 id="amount" class="text-lg font-medium">${newAmount} BDT</h3>`;
