@@ -14,12 +14,14 @@ function handleDonationCalculation(
   donatioAmountID,
   currentDonationId,
   showAmountId,
-  headingId
+  headingId,
+  succeModalId
 ) {
   const donateValue = getInputValueById(donatioAmountID);
   const amount = getvalueByInnerText("amount");
   const currentAmount = getvalueByInnerText(currentDonationId);
   const donateHeading = getInnerText(headingId);
+  const succeModal = document.getElementById(succeModalId)
 
   // handle validation
   if (isNaN(donateValue) || donateValue <= 0 || amount < donateValue) {
@@ -37,6 +39,7 @@ function handleDonationCalculation(
   document.getElementById(donatioAmountID).value = " ";
 
   const currentDate = new Date().toLocaleString();
+  succeModal.showModal()
 
   // history functionality
   const newHistory = document.createElement("div");

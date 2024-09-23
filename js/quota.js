@@ -5,6 +5,7 @@ document
       "quota_donation_amount",
       "current_donation_amount_quota",
       "show_updated_amount_quota",
-      "heading_quota"
+      "heading_quota",
+      "success_modal"
     );
   });
