@@ -5,21 +5,27 @@ function getInputValueById(id) {
 function getvalueByInnerText(id) {
   return parseFloat(document.getElementById(id).innerText);
 }
+function getInnerText(id) {
+  return document.getElementById(id).innerText;
+}
 
 // handleDonationCalculation funtionality
 function handleDonationCalculation(
   donatioAmountID,
   currentDonationId,
-  showAmountId
+  showAmountId,
+  headingId
 ) {
   const donateValue = getInputValueById(donatioAmountID);
-  // console.log(donateAmount)
   const amount = getvalueByInnerText("amount");
   const currentAmount = getvalueByInnerText(currentDonationId);
+  const donateHeading = getInnerText(headingId);
 
+  // handle validation
   if (isNaN(donateValue) || donateValue <= 0 || amount < donateValue) {
     return alert("Invalid donation amount");
   }
+
   const newDonateAmount = currentAmount + donateValue;
   const newAmount = amount - donateValue;
   document.getElementById(
@@ -29,4 +35,16 @@ function handleDonationCalculation(
     "show_amount"
   ).innerHTML = `<h3 id="amount" class="text-lg font-medium">${newAmount} BDT</h3>`;
   document.getElementById(donatioAmountID).value = " ";
+
+  const currentDate = new Date().toLocaleString();
+
+  // history functionality
+  const newHistory = document.createElement("div");
+  newHistory.innerHTML = `
+   <div id="updated_history" class="bg-white mt-4 shadow-md rounded-lg p-8 border border-[#1111111A]">
+              <h1 class="text-xl font-bold pb-4">${newDonateAmount} Taka ${donateHeading}</h1>
+  <p>Date : ${currentDate}</p>
+            </div>
+  `;
+  document.getElementById("history_container").appendChild(newHistory);
 }

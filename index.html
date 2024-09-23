@@ -44,10 +44,14 @@
     <main class="font-lexend">
       <!-- tab button group start -->
       <div class="flex justify-center items-center gap-6 pt-16 pb-14">
-        <button class="px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold">
+        <button
+          id="btn_donation"
+          class="px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
+        >
           Donation
         </button>
         <button
+          id="btn_history"
           class="px-8 py-3 border border-[rgba(17, 17, 17, 0.3)] rounded-lg text-xl font-semibold"
         >
           History
@@ -56,7 +60,7 @@
       <!-- tab button group end -->
 
       <!-- donation card start -->
-      <section class="max-w-7xl mx-auto">
+      <section id="show_donation" class="max-w-7xl mx-auto">
         <div
           class="bg-white shadow-md rounded-2xl border border-[#1111111A] p-8"
         >
@@ -79,7 +83,10 @@
                   </h3>
                 </div>
               </div>
-              <h2 class="text-xl font-bold text-[#111111] mt-4">
+              <h2
+                id="heading_noakhali"
+                class="text-xl font-bold text-[#111111] mt-4"
+              >
                 Donate for Flood at Noakhali, Bangladesh
               </h2>
               <p class="pt-4 pb-6 text-[#111111B3]">
@@ -115,7 +122,7 @@
               <img src="./images/feni.png" alt="noakhali image" />
             </div>
             <div class="w-[522px]">
-                <div
+              <div
                 class="w-[150px] flex items-center gap-2 py-3 px-4 bg-gray-200 rounded-lg"
               >
                 <img src="./images/coin.png" alt="noakhali image" />
@@ -129,7 +136,10 @@
                   </h3>
                 </div>
               </div>
-              <h2 class="text-xl font-bold text-[#111111] mt-4">
+              <h2
+                id="heading_feni"
+                class="text-xl font-bold text-[#111111] mt-4"
+              >
                 Donate for Flood Relief in Feni,Bangladesh
               </h2>
               <p class="pt-4 pb-6 text-[#111111B3]">
@@ -143,14 +153,14 @@
                 to assist those in urgent need.
               </p>
               <input
-              id="feni_donation_amount"
+                id="feni_donation_amount"
                 class="border border-[#1111111A] w-[522px] rounded-lg p-4"
                 type="text"
                 placeholder="Write donation amount"
               />
               <div class="mt-4">
                 <button
-                id="btn_donate_feni"
+                  id="btn_donate_feni"
                   class="w-[522px] text-[#111111] px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
                 >
                   Donate Now
@@ -167,7 +177,7 @@
               <img src="./images/quota-protest.png" alt="noakhali image" />
             </div>
             <div class="w-[522px]">
-                <div
+              <div
                 class="w-[150px] flex items-center gap-2 py-3 px-4 bg-gray-200 rounded-lg"
               >
                 <img src="./images/coin.png" alt="noakhali image" />
@@ -181,7 +191,10 @@
                   </h3>
                 </div>
               </div>
-              <h2 class="text-xl font-bold text-[#111111] mt-4">
+              <h2
+                id="heading_quota"
+                class="text-xl font-bold text-[#111111] mt-4"
+              >
                 Aid for Injured in the Quota Movement
               </h2>
               <p class="pt-4 pb-6 text-[#111111B3]">
@@ -196,14 +209,14 @@
                 brave individuals in their time of need.
               </p>
               <input
-              id="quota_donation_amount"
+                id="quota_donation_amount"
                 class="border border-[#1111111A] w-[522px] rounded-lg p-4"
                 type="text"
                 placeholder="Write donation amount"
               />
               <div class="mt-4">
                 <button
-                id="btn_donate_quota"
+                  id="btn_donate_quota"
                   class="w-[522px] text-[#111111] px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
                 >
                   Donate Now
@@ -214,11 +227,34 @@
         </div>
       </section>
       <!-- donation card end -->
+
+      <!-- history section card start -->
+      <section id="show_history" class="max-w-7xl mx-auto hidden h-auto">
+        <div id="history_container"></div>
+      </section>
+      <!-- history section card end -->
+
+      <!-- donation modal start -->
+      
+      <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+            
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- donation modal end -->
     </main>
     <!-- main end -->
 
     <!-- footer start  -->
-    <footer class="bg-[#F9F7F3] py-10 font-lexend mt-20">
+    <footer class="bg-[#F9F7F3] py-10 font-lexend">
       <p class="text-center italic font-medium">Developed by © Md Rony</p>
     </footer>
     <!-- footer end -->
@@ -227,6 +263,7 @@
     <script src="./js/noakhali.js"></script>
     <script src="./js/feni.js"></script>
     <script src="./js/quota.js"></script>
+    <script src="./js/feature.js"></script>
     <script src="./js/utilsFunction.js"></script>
   </body>
 </html>
