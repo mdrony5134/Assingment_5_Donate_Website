@@ -18,16 +18,16 @@
   </head>
   <body>
     <!-- header start -->
-    <header class="bg-[#F9F7F3] py-6 font-lexend">
+    <header class="bg-[#F9F7F3] py-6 font-lexend px-4 md:px-0 fixed top-0 left-0 z-50 w-full">
       <div class="max-w-7xl mx-auto">
         <div class="flex justify-between items-center">
           <button
           id="btn_blog"
-            class="px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
+            class="md:px-8 px-4 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
           >
             Blog
           </button>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 ml-4 md:ml-0">
             <img src="./images/logo.png" alt="logo image" />
             <h1 class="text-lg font-semibold">Donate Bangladesh</h1>
           </div>
@@ -44,16 +44,16 @@
     <!-- main start -->
     <main class="font-lexend">
       <!-- tab button group start -->
-      <div class="flex justify-center items-center gap-6 pt-16 pb-14">
+      <div id="btn_group" class="flex justify-center  items-center gap-6 pt-40 pb-14 sticky top-[0px] transition-colors duration-300 bg-opacity-50">
         <button
           id="btn_donation"
-          class="px-8 py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
+          class="md:px-8 px-4  py-3 bg-[#B4F461] rounded-lg text-xl font-semibold"
         >
           Donation
         </button>
         <button
           id="btn_history"
-          class="px-8 py-3 border border-[rgba(17, 17, 17, 0.3)] rounded-lg text-xl font-semibold"
+          class="md:px-8 px-4 py-3 border border-[rgba(17, 17, 17, 0.3)] rounded-lg text-xl font-semibold"
         >
           History
         </button>
@@ -61,7 +61,7 @@
       <!-- tab button group end -->
 
       <!-- donation card start -->
-      <section id="show_donation" class="max-w-7xl mx-auto">
+      <section id="show_donation" class="max-w-7xl mx-auto px-5 md:px-0 pb-20">
         <div
           class="bg-white shadow-md rounded-2xl border border-[#1111111A] p-8"
         >
@@ -230,14 +230,12 @@
       <!-- donation card end -->
 
       <!-- history section card start -->
-      <section id="show_history" class="max-w-7xl mx-auto hidden h-auto">
+      <section id="show_history" class="max-w-7xl mx-auto hidden px-5 md:px-0 md:pb-[350px] pb-[470px]">
         <div id="history_container"></div>
       </section>
       <!-- history section card end -->
 
       <!-- donation modal start -->
-
-      <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
       <dialog id="success_modal" class="modal">
         <div class="modal-box text-center">
           <h3 class="text-5xl text-center font-bold">Congrats!</h3>
@@ -248,7 +246,7 @@
           <p class="text-2xl font-bold">Successfully</p>
           <div class="modal-action">
             <form method="dialog">
-              <button class="btn mr-40">Close Confirmation</button>
+              <button class="btn md:mr-40 mr-20">Close Confirmation</button>
             </form>
           </div>
         </div>

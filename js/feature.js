@@ -24,3 +24,17 @@ document.getElementById("btn_blog").addEventListener("click",function(){
   window.location.href = "/blog.html"
 })
 
+// scroll behavior  sticky btn_group section
+
+window.addEventListener("scroll", function(){
+  const btnGroup = document.getElementById("btn_group")
+  const scrollPosition = window.scrollY;
+
+  if(scrollPosition > 100){
+    btnGroup.classList.remove("bg-[#F9F7F3]")
+    btnGroup.classList.add("bg-gradient-to-r", "from-[#F9F7F3]", "to-[#F9F7F3]")
+  }else{
+    btnGroup.classList.add("bg-white")
+    btnGroup.classList.remove("bg-gradient-to-r", "from-[#F9F7F3]", "to-[#F9F7F3]")
+  }
+})
