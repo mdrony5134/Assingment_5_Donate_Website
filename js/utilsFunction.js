@@ -36,7 +36,7 @@ function handleDonationCalculation(
   document.getElementById(
     "show_amount"
   ).innerHTML = `<h3 id="amount" class="text-lg font-medium">${newAmount} BDT</h3>`;
-  document.getElementById(donatioAmountID).value = " ";
+  document.getElementById(donatioAmountID).value = "";
 
   const currentDate = new Date().toLocaleString();
   succeModal.showModal()
